@@ -55,8 +55,8 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Admin Page for:</div>
+                        Padukuhan Klangon
                     </div>
                 </nav>
             </div>
@@ -75,7 +75,7 @@
                         <div id="UmurPenduduk" class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Artikel Pengumuman
+                                Perangkat Padukuhan
                             </div>
                             <div class="card-body">
 

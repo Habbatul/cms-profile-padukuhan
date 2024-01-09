@@ -55,8 +55,8 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Admin Page for:</div>
+                        Padukuhan Klangon
                     </div>
                 </nav>
             </div>
@@ -64,7 +64,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Ubah Pengumuman</h1>
+                        <h1 class="mt-4">Ubah Perangkat</h1>
 
                         <!-- card atas -->
                         <div class="row mt-3">
@@ -76,7 +76,7 @@
                         <div id="UmurPenduduk" class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Artikel Pengumuman
+                                Perangkat Padukuhan
                             </div>
                             <div class="card-body">
 
