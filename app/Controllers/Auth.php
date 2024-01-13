@@ -57,7 +57,7 @@ class Auth extends BaseController
         $key = getenv('JWT_SECRET');
         $payload = [
             'user_id' => $userId,
-            'exp' => time() + 10, // Token expiration time (1 hour in this example)
+            'exp' => time() + 3600, // Token expiration time (1 hour in this example)
         ];
 
         return JWT::encode($payload, $key, 'HS256');

@@ -274,8 +274,19 @@ class FromHandler extends BaseController
         $pengumumanModel->insert($data);
         
 
-        return redirect()->to(base_url('/admin/form-tambah-pengumuman'));
+        return redirect()->to(base_url('/admin/pengumuman'));
     }   
+
+    public function hapusPengumuman()
+    {
+        $pengumumanModel = new PengumumanModel();
+
+        $id = $this->request->getGet('code');
+
+        $pengumumanModel->where('id', $id)->delete();
+
+        return redirect()->to('/admin/pengumuman');
+    } 
           
      
 

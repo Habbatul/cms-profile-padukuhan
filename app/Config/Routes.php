@@ -37,6 +37,8 @@ $routes->group('admin', ['filter' => 'jwt'], function($routes){
     
     $routes->get('form-tambah-pengumuman', 'admin::tambahPengumuman');
     $routes->post('tambahArtikel', 'FromHandler::tambahPengumuman');
+
+    $routes->get('hapusArtikel', 'FromHandler::hapusPengumuman');
 });
 
 $routes->group('admin', ['namespace' => 'App\Controllers'], function ($routes) {

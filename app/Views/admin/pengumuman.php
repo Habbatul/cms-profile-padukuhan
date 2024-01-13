@@ -112,7 +112,7 @@
 
                                             <td class="text-center">
                                                 <a class="btn btn-primary btn-sm mt-2" href="form-ubah-pengumuman?code=<?= $row['id'] ?>"><small>Ubah</small></a>
-                                                <a class="btn btn-danger btn-sm mt-2"><small>Hapus</small></a>
+                                                <a class="btn btn-danger btn-sm mt-2" href="hapusArtikel?code=<?= $row['id']?>"><small>Hapus</small></a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
