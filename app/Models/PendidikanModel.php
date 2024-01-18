@@ -6,4 +6,5 @@ use CodeIgniter\Model;
 class PendidikanModel extends Model
 {
     protected $table = 'pendidikan';
+    protected $allowedFields = ['pendidikan', 'jumlah'];
 }

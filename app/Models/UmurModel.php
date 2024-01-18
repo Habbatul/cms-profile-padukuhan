@@ -6,4 +6,5 @@ use CodeIgniter\Model;
 class UmurModel extends Model
 {
     protected $table = 'umur';
+    protected $allowedFields = ['kelompok', 'jumlah'];
 }
