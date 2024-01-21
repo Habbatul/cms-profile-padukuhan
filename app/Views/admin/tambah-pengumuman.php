@@ -84,7 +84,7 @@
                                     <!-- Judul -->
                                     <div class="form-group">
                                         <label for="judul">Judul</label>
-                                        <input type="text" class="form-control" id="judul" name="judul" value="<?= $pengumuman['judul'] ?>" required>
+                                        <input type="text" class="form-control" id="judul" name="judul" required>
                                     </div>
 
                                     <!-- Foto -->
@@ -100,7 +100,7 @@
                                         <small class="form-text text-muted">Unggah foto pengumuman (opsional).</small>
                                         <div class="mt-3">
                                             <label for="current-photo">Foto saat ini</label><br>
-                                            <img id="current-photo" class="img-fluid" src="<?= $pengumuman['foto'] ?>" alt="Current Photo" style="max-height: 200px;">
+                                            <img id="current-photo" class="img-fluid" src="https://via.placeholder.com/320x180.png?text=Foto Pengumuman atau Artikel" alt="Current Photo" style="max-height: 200px;">
                                         </div>
                                         <script>
                                             // Update the displayed file name and preview the selected photo
@@ -124,13 +124,13 @@
                                     <!-- Tanggal -->
                                     <div class="form-group mt-4">
                                         <label for="tanggal">Tanggal</label>
-                                        <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $pengumuman['tanggal'] ?>" required>
+                                        <input type="date" class="form-control" id="tanggal" name="tanggal" required>
                                     </div>
 
                                     <!-- Penulis -->
                                     <div class="form-group mt-2">
                                         <label for="penulis">Penulis</label>
-                                        <input type="text" class="form-control" id="user" name="penulis" value="<?= $pengumuman['user'] ?>" required>
+                                        <input type="text" class="form-control" id="user" name="penulis" required>
                                     </div>
 
                                     <!-- Artikel -->
@@ -138,10 +138,10 @@
                                         <label for="artikel">Artikel</label>
                                         <!-- Quill editor container -->
                                         <div id="quill-editor" style="height: 300px;white-space: pre-wrap;"></div>
-                                        <input type="hidden" id="artikel" name="artikel" value="<?= $pengumuman['artikel'] ?>">
+                                        <input type="hidden" id="artikel" name="artikel">
                                     </div>
 
-                                    <input type="hidden" name="id" value="<?= $pengumuman['id']?>">
+                                    <input type="hidden" name="id">
                                     <button type="submit" class="btn btn-primary mt-4">Simpan Perubahan</button>
                                 </form>
                                 

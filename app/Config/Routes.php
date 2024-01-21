@@ -35,4 +35,7 @@ $routes->post('admin/ubahJenisKelamin', 'FromHandler::ubahJenisKelamin');
 $routes->get('admin/form-ubah-pengumuman', 'admin::ubahPengumuman');
 $routes->post('admin/ubahArtikel', 'FromHandler::ubahPengumuman');
 
+$routes->get('admin/form-tambah-pengumuman', 'admin::tambahPengumuman');
+$routes->post('admin/tambahArtikel', 'FromHandler::tambahPengumuman');
+
 $routes->get('admin/login', 'Admin::login');

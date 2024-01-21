@@ -83,6 +83,11 @@ class Admin extends BaseController
         return view("/admin/ubah-pengumuman", ['pengumuman' => $pengumumanData]);
     }
 
+    public function tambahPengumuman()
+    {
+        return view("/admin/tambah-pengumuman");
+    }
+
     public function login()
     {
         return view("/admin/login");

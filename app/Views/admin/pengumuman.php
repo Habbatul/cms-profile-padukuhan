@@ -73,7 +73,7 @@
                             </div>
                            
                         </div>
-                        <div> <a class="btn btn-success w-auto mt-2 mb-2">Tambah Pengumuman</a></div>
+                        <div> <a href="<?= base_url('admin/form-tambah-pengumuman'); ?>" class="btn btn-success w-auto mt-2 mb-2">Tambah Pengumuman</a></div>
                        
                         <!-- Tabel Pertama -->
                         <div id="UmurPenduduk" class="card mb-4">
