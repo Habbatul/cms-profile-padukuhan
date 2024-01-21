@@ -230,6 +230,52 @@ class FromHandler extends BaseController
 
         return redirect()->to(base_url('/admin/form-ubah-pengumuman?code=').$id);
     }   
+
+    public function tambahPengumuman()
+    {
+        $pengumumanModel = new PengumumanModel();
+        
+        $id = $this->request->getPost('id');
+        $judul = $this->request->getPost('judul');
+        $tanggal   = $this->request->getPost('tanggal');
+        $penulis   = $this->request->getPost('penulis');
+        $artikel   = $this->request->getPost('artikel');
+
+        //ambil request foto
+        $foto = $this->request->getFile('foto');
+
+        //Array untuk data ke db
+        $data = [
+            'id' => $id,
+            'judul' => $judul,
+            'tanggal'   => $tanggal,
+            'user'   => $penulis,
+            'artikel'   => $artikel,
+        ];
+
+        // Menyimpan gambar di server dengan nama unik (bila foto ada, tidak wajib)
+        if ($foto->isValid() && !$foto->hasMoved()) {
+            $newName = $foto->getRandomName();
+            $foto->move(ROOTPATH . 'public/uploads', $newName);
+            // Kompresi gambar menggunakan library Image
+            \Config\Services::image()
+            ->withFile(ROOTPATH . 'public/uploads/' . $newName)
+            ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
+
+            $data['foto'] = base_url("uploads/".$newName);
+        }
+
+
+        // if(empty($id) || empty($judul) || empty($tanggal) || empty($artikel )){
+        //     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        // }
+
+        //gunakan query builder
+        $pengumumanModel->insert($data);
+        
+
+        return redirect()->to(base_url('/admin/form-tambah-pengumuman'));
+    }   
           
      
 

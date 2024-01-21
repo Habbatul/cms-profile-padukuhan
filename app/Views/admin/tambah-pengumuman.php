@@ -79,7 +79,7 @@
                             </div>
                             <div class="card-body">
 
-                                <form action="/admin/ubahArtikel" method="post" enctype="multipart/form-data"  onsubmit="updateQuillContent()">
+                                <form action="/admin/tambahArtikel" method="post" enctype="multipart/form-data"  onsubmit="updateQuillContent()">
 
                                     <!-- Judul -->
                                     <div class="form-group">
