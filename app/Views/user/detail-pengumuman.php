@@ -14,33 +14,33 @@
 
 <body class="bg-gray-100 flex flex-col min-h-screen">
 
-    <header class="bg-emerald-950 text-white text-center py-4">
-        <h1 class="md:text-2xl text-xl font-semibold font-Sora">Padukuhan Klangon</h1>
-    </header>
-
-    <nav class="bg-[#026e5a] text-white py-5 shadow-xl">
-        <div class="max-w-screen-lg mx-auto flex items-center justify-between">
-            <div class="md:hidden ml-auto">
-                <button id="menuButton" class="text-white focus:outline-none hover:text-green-400 flex items-center">
-                    <svg class="w-12 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                    <span class="mr-2">Menu</span>
-                </button>
+    <div class="sticky top-0 z-50">
+        <nav id="navbar" class="bg-[#026e5a] text-white py-3 relative h-fit shadow-[0_2px_10px_4px_rgba(0,0,0,0.2)]">
+            <div class="flex justify-between">
+                <h1 class="animate-slide-down md:text-2xl text-lg font-medium font-Poppins my-auto ml-3 md:ml-8">Padukuhan <span class="text-emerald-400">Klangon</span></h1>
+                <div class="flex items-center justify-between">
+                    <div class="lg:hidden ml-auto">
+                        <button id="menuButton" class="text-white focus:outline-none hover:text-green-400 flex items-center">
+                            <svg class="w-12 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                            <span class="mr-2">Menu</span>
+                        </button>
+                    </div>
+                </div>
+               <div id="mobileMenu" class="hidden lg:block absolute lg:relative bottom-0 translate-y-full lg:translate-y-0 left-0 w-full lg:w-fit -z-10 lg:z-20 lg:pr-7 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.4)] lg:shadow-none animate-dissolve-in lg:animate-none">
+                    <div class="flex flex-col lg:flex-row space-y-2 lg:space-y-0 pt-8 lg:pt-0 text-center bg-[#026e5a] pb-5 lg:pb-0 lg:transition-opacity">
+                        <a href="/" class="hover:underline decoration-4 underline-offset-8 decoration-emerald-400 py-1 px-2 rounded-lg mx-2 font-Inter">Beranda</a>
+                        <a href="perangkat" class="hover:underline decoration-4 underline-offset-8 decoration-emerald-400 py-1 px-2 rounded-lg mx-2 font-Inter">Perangkat</a>
+                        <a href="potensi" class="hover:underline decoration-4 underline-offset-8 decoration-emerald-400 py-1 px-2 rounded-lg mx-2 font-Inter">Potensi</a>
+                        <a href="pengumuman" class="text-white underline decoration-4 underline-offset-8 decoration-emerald-400 font-semibold py-1 px-2 rounded-lg  mx-2 font-Inter">Pengumuman</a>
+                        <a href="visi-misi" class="hover:underline decoration-4 underline-offset-8 decoration-emerald-400 py-1 px-2 rounded-lg mx-2 font-Inter">Visi-Misi</a>
+                        <a href="demografi" class="hover:underline decoration-4 underline-offset-8 decoration-emerald-400 py-1 px-2 rounded-lg mx-2 font-Inter">Demografi</a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-
-        <div id="mobileMenu" class="hidden md:block flex flex-col space-y-2 mt-8 md:mt-1 mx-auto text-center">
-            <a href="/" class="hover:text-green-900 hover:bg-slate-50 py-2 px-3 rounded-2xl mx-2 font-Inter transition">Beranda</a>
-            <a href="perangkat" class="hover:text-green-900 hover:bg-slate-50 py-2 px-3 rounded-2xl mx-2 font-Inter transition">Perangkat</a>
-            <a href="potensi" class="hover:text-green-900 hover:bg-slate-50 py-2 px-3 rounded-2xl mx-2 font-Inter transition">Potensi</a>
-            <a href="pengumuman" class="hover:text-green-900 text-black py-2 px-3 rounded-2xl bg-slate-50 mx-2 font-Inter transition">Pengumuman</a>
-            <a href="visi-misi" class="hover:text-green-900 hover:bg-slate-50 py-2 px-3 rounded-2xl mx-2 font-Inter transition">Visi-Misi</a>
-            <a href="demografi" class="hover:text-green-900 hover:bg-slate-50 py-2 px-3 rounded-2xl mx-2 font-Inter transition">Demografi</a>
-        </div>
-    </nav>
-
+        </nav>
+    </div>
 
 
     <!-- Isian disini -->
@@ -77,12 +77,18 @@
                     <img class="md:max-w-[43rem] md:min-w-[43rem] max-w-full object-cover" src="<?= $pengumumanData['foto'] ?>" alt="Foto">
                 </div>
             <?php endif; ?>
+            <div class="my-8"></div>
+            <?php 
+            //Hasil dari QuillJs berupa tag p, modifikasi tag dari hasil quill dengan class tailwind
+            $artikelContentList = str_replace('<ul>', '<ul class="list-disc ml-8">', $pengumumanData['artikel']);
+            $artikelContent = str_replace('<p>', '<p class="text-justify my-4 mx-2 whitespace-pre-wrap">', $artikelContentList); 
+            ?>
 
-
-            <p class="text-justify my-10 mx-2 whitespace-pre-wrap"><?= $pengumumanData['artikel'] ?></p>
+            <?= $artikelContent;?>
+            <!-- <p class="text-justify my-10 mx-2 whitespace-pre-wrap">teks disini/p> -->
         </div>
 
-        <div id="side-news" class="flex flex-col items-center justify-center mx-9 my-5">
+        <div id="side-news" class="flex flex-col items-center mx-9 my-5">
             <h3 class="font-bold text-2xl text-center my-5 font-Poppins mt-10 overline decoration-4 decoration-emerald-600 text-emerald-700">Artikel Terbaru</h3>
             <div class="flex lg:flex-col flex-wrap items-center justify-center  ">
                 <!-- fetch disini -->
@@ -170,9 +176,28 @@
         const menuButton = document.getElementById('menuButton');
         const mobileMenu = document.getElementById('mobileMenu');
 
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+    //jalankan task setelah animasi selesai
+    var kondisi = true;
+
+    mobileMenu.addEventListener("animationend", (event) => {
+        if (!kondisi) {
+                mobileMenu.classList.add('hidden');
+                console.log("test");
+        }
+    });
+
+    menuButton.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('hidden')) {
+            kondisi = true
+            mobileMenu.classList.remove('animate-dissolve-out');
+            mobileMenu.classList.add('animate-dissolve-in');
+            mobileMenu.classList.remove('hidden');
+        } else {
+            kondisi = false;
+            mobileMenu.classList.remove('animate-dissolve-in');
+            mobileMenu.classList.add('animate-dissolve-out');
+        }
+    });
     </script>
 
 </body>

@@ -168,8 +168,69 @@ class FromHandler extends BaseController
              'jumlah_perempuan'   => $jumlahUmur,
          ];
  
-         $jenisKelaminModel->where('id', $id)->set($data)->update();;
+         $jenisKelaminModel->where('id', $id)->set($data)->update();
  
          return redirect()->to('/admin/beranda#JenisKelamin');
-     }    
+     }   
+
+
+    // CRUD Jenis ubahPengumuman
+    public function ubahPengumuman()
+    {
+        $pengumumanModel = new PengumumanModel();
+        
+        $id = $this->request->getPost('id');
+        $judul = $this->request->getPost('judul');
+        $tanggal   = $this->request->getPost('tanggal');
+        $penulis   = $this->request->getPost('penulis');
+        $artikel   = $this->request->getPost('artikel');
+
+        //pemrosesan file
+        $namaGambar = $pengumumanModel->getFotoById($id);
+
+        //ambil request foto
+        $foto = $this->request->getFile('foto');
+
+        //Array untuk data ke db
+        $data = [
+            'id' => $id,
+            'judul' => $judul,
+            'tanggal'   => $tanggal,
+            'user'   => $penulis,
+            'artikel'   => $artikel,
+        ];
+
+        // Menyimpan gambar di server dengan nama unik (bila foto ada, tidak wajib)
+        if ($foto->isValid() && !$foto->hasMoved()) {
+            $newName = $foto->getRandomName();
+            $foto->move(ROOTPATH . 'public/uploads', $newName);
+            // Kompresi gambar menggunakan library Image
+            \Config\Services::image()
+            ->withFile(ROOTPATH . 'public/uploads/' . $newName)
+            ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
+
+            //ekstraksi base_url pada $namaGambar
+            $namaGambar = str_replace(base_url(), '', $namaGambar);
+            // Hapus file lama jika ada
+            if ($namaGambar && file_exists(ROOTPATH . 'public/' . $namaGambar)) {
+                unlink(ROOTPATH . 'public/' . $namaGambar);
+            }
+
+            //tambahkan key 'foto' untuk mengubah imahge
+            $data['foto'] = base_url("uploads/".$newName);
+        }
+
+
+        if(empty($id) || empty($judul) || empty($tanggal) || empty($artikel )){
+            throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        }
+
+        //gunakan query builder
+        $pengumumanModel->where('id', $id)->set($data)->update();;
+
+        return redirect()->to(base_url('/admin/form-ubah-pengumuman?code=').$id);
+    }   
+          
+     
+
 }

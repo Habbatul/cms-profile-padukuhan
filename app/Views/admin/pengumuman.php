@@ -90,7 +90,7 @@
                                             <th style="width:10rem;">Foto</th>
                                             <th >Tanggal</th>
                                             <th >Penulis</th>
-                                            <th style="width:20rem">Artikel</th>
+                                            <th style="width:20rem">Artikel (preview)</th>
                                             <th >Pilihan</th>
                                         </tr>
                                     </thead>
@@ -105,13 +105,13 @@
                                             <td>
                                                 <div style="width:16rem"></div>
                                                 <p class="artikelContent">
-                                                    <?= $row['artikel'] ?>
+                                                <?= strip_tags($row['artikel']) ?>
                                                 </p>
-                                                <button class="toggleButton btn btn-warning btn-sm" onclick="toggleText()">Klik untuk text penuh</button>
+
                                             </td>
 
                                             <td class="text-center">
-                                                <a class="btn btn-primary btn-sm mt-2"><small>Ubah</small></a>
+                                                <a class="btn btn-primary btn-sm mt-2" href="form-ubah-pengumuman?code=<?= $row['id'] ?>"><small>Ubah</small></a>
                                                 <a class="btn btn-danger btn-sm mt-2"><small>Hapus</small></a>
                                             </td>
                                         </tr>
@@ -143,42 +143,42 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="<?=  base_url('sb-admin/js/scripts.js') ?>"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-        <script src="<?=  base_url('sb-admin/assets/demo/chart-area-demo.js') ?>"></script>
-        <script src="<?=  base_url('sb-admin/assets/demo/chart-bar-demo.js') ?>"></script>
         <script>
-                document.addEventListener("DOMContentLoaded", function () {
+            //Fungsi untuk memberikan fitur truncate(...) pada teks yang lebih dari 200 kata
+            //dengan melakukan query selector pada .artikelContent
+            document.addEventListener("DOMContentLoaded", function () {
                 var artikelContents = document.querySelectorAll(".artikelContent");
-                var toggleButtons = document.querySelectorAll(".toggleButton");
 
-                artikelContents.forEach(function (artikelContent, index) {
+                artikelContents.forEach(function (artikelContent) {
                     var fullText = artikelContent.textContent;
-                    var isFull = false;
-
-                    toggleButtons[index].addEventListener("click", function () {
-                        toggleText(artikelContent, toggleButtons[index]);
-                    });
-
                     var maxChars = 200;
 
-                    if (artikelContent.textContent.length > maxChars) {
-                        var truncatedText = artikelContent.textContent.substring(0, maxChars);
+                    if (fullText.length > maxChars) {
+                        var truncatedText = fullText.substring(0, maxChars);
                         artikelContent.textContent = truncatedText + "...";
-                    }
 
-                    function toggleText(artikelContent, toggleButton) {
-                        if (isFull) {
-                            artikelContent.textContent = fullText.substring(0, maxChars) + "...";
-                            toggleButton.textContent = "Klik untuk text penuh";
-                        } else {
-                            artikelContent.textContent = fullText;
-                            toggleButton.textContent = "Klik untuk sembunyikan";
+                        var toggleButton = document.createElement("button");
+                        toggleButton.className = "toggleButton btn btn-warning btn-sm";
+                        toggleButton.textContent = "Klik untuk text penuh";
+                        artikelContent.parentNode.insertBefore(toggleButton, artikelContent.nextSibling);
+
+                        toggleButton.addEventListener("click", function () {
+                            toggleText(artikelContent, toggleButton);
+                        });
+
+                        function toggleText(artikelContent, toggleButton) {
+                            if (artikelContent.textContent === fullText) {
+                                artikelContent.textContent = truncatedText + "...";
+                                toggleButton.textContent = "Klik untuk text penuh";
+                            } else {
+                                artikelContent.textContent = fullText;
+                                toggleButton.textContent = "Klik untuk sembunyikan";
+                            }
                         }
-
-                        isFull = !isFull;
                     }
                 });
             });
         </script>
+
     </body>
 </html>

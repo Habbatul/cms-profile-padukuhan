@@ -72,4 +72,20 @@ class Admin extends BaseController
         ]);
     }
 
+    public function ubahPengumuman()
+    {
+        $id = $this->request->getGet('code');
+
+        // implementasi penggunaan file disini
+
+        $pengumumanModel = new PengumumanModel();
+        $pengumumanData = $pengumumanModel->find($id);
+        return view("/admin/ubah-pengumuman", ['pengumuman' => $pengumumanData]);
+    }
+
+    public function login()
+    {
+        return view("/admin/login");
+    }
+
 }

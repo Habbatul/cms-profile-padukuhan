@@ -6,6 +6,7 @@ use CodeIgniter\Model;
 class PengumumanModel extends Model
 {
     protected $table = 'pengumuman';
+    protected $allowedFields = ['id', 'judul', 'foto', 'tanggal', 'user', 'artikel' ];
 
     public function sortByDate($limit){
         return $this->orderBy('tanggal', 'DESC')
@@ -25,6 +26,17 @@ class PengumumanModel extends Model
             'data' => $query,
             'pager' => $this->pager,
         ];
+    }
+
+
+    public function getFotoById($id)
+    {
+        $result = $this->select('foto') // Gantilah 'foto' dengan nama kolom gambar Anda
+            ->where('id', $id)
+            ->get()
+            ->getRow();
+
+        return $result ? $result->foto : null;
     }
     
 }

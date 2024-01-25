@@ -31,3 +31,8 @@ $routes->post('admin/ubahPekerjaan', 'FromHandler::ubahPekerjaan');
 $routes->get('admin/hapusPekerjaan', 'FromHandler::hapusPekerjaan');
 
 $routes->post('admin/ubahJenisKelamin', 'FromHandler::ubahJenisKelamin');
+
+$routes->get('admin/form-ubah-pengumuman', 'admin::ubahPengumuman');
+$routes->post('admin/ubahArtikel', 'FromHandler::ubahPengumuman');
+
+$routes->get('admin/login', 'Admin::login');
