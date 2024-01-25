@@ -64,13 +64,12 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Ubah Pengumuman</h1>
+                        <h1 class="mt-4">Tambah Pengumuman</h1>
 
                         <!-- card atas -->
                         <div class="row mt-3">
                            
                         </div>
-                
                        
                         <!-- Tabel Pertama -->
                         <div id="UmurPenduduk" class="card mb-4">
