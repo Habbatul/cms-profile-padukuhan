@@ -19,10 +19,16 @@
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl ">
                     Login Admin Padukuhan
                 </h1>
-                <form class="space-y-4 md:space-y-6" action="#">
+                <?php if (isset($error)): ?>
+                    <div class="bg-red-500 text-white p-3 mb-4 rounded-md">
+                        <?php echo $error; ?>
+                    </div>
+                <?php endif; ?>
+                <?php echo form_open('/admin/login', 'class="space-y-4 md:space-y-6"'); ?>
+                <!-- <form class="space-y-4 md:space-y-6" action="#"> -->
                     <div>
                         <label for="email" class="block mb-2 text-sm font-medium text-white ">Username</label>
-                        <input type="text" name="email" id="email" class=" text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400  focus:ring-blue-500 focus:border-blue-500" placeholder="orang" required="">
+                        <input type="text" name="username" id="email" class=" text-white sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400  focus:ring-blue-500 focus:border-blue-500" placeholder="orang" required="">
                     </div>
                     <div>
                         <label for="password" class="block mb-2 text-sm font-medium text-white">Password</label>
@@ -31,7 +37,8 @@
                     <div class="flex justify-center">
                         <button type="submit" class="hover:bg-black hover:text-white bg-slate-200 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center">Login</button>
                     </div>
-                </form>
+                <!-- </form> -->
+                <?php echo form_close(); ?>
             </div>
         </div>
     </section>
