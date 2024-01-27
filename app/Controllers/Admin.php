@@ -87,10 +87,4 @@ class Admin extends BaseController
     {
         return view("/admin/tambah-pengumuman");
     }
-
-    public function login()
-    {
-        return view("/admin/login");
-    }
-
 }
