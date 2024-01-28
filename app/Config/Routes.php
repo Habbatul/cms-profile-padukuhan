@@ -39,9 +39,18 @@ $routes->group('admin', ['filter' => 'jwt'], function($routes){
     $routes->post('tambahArtikel', 'FromHandler::tambahPengumuman');
 
     $routes->get('hapusArtikel', 'FromHandler::hapusPengumuman');
+
+
+    $routes->get('form-ubah-perangkat', 'admin::ubahPerangkat');
+    $routes->post('ubahPerangkat', 'FromHandler::ubahPerangkat');
+    
+    $routes->get('form-tambah-perangkat', 'admin::tambahPerangkat');
+    $routes->post('tambahPerangkat', 'FromHandler::tambahPerangkat');
+
+    $routes->get('hapusPerangkat', 'FromHandler::hapusPerangkat');
 });
 
 $routes->group('admin', ['namespace' => 'App\Controllers'], function ($routes) {
     $routes->get('login', 'Auth::login');
-    $routes->post('login', 'Auth::login');
+    $routes->post('login', 'Auth::loginValidation');
 });

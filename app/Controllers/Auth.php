@@ -7,7 +7,7 @@ use Firebase\JWT\JWT;
 
 class Auth extends BaseController
 {
-    public function login()
+    public function loginValidation()
     {
         $data = []; // Untuk data yang akan dikirim ke view
 
@@ -47,9 +47,14 @@ class Auth extends BaseController
                 $data['error'] = 'Username atau password salah';
             }
         }
-
+        $session = session();
+        $session->setFlashdata('err',$data['error']);
         // Tampilkan view login dengan data
-        return view('admin/login', $data);
+        return redirect()->to(base_url('admin/login'));
+    }
+
+    public function login(){
+        return view("admin/login");
     }
 
     private function generateToken($userId)

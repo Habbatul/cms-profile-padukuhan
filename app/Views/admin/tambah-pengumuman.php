@@ -140,9 +140,7 @@
                                         <div id="quill-editor" style="height: 300px;white-space: pre-wrap;"></div>
                                         <input type="hidden" id="artikel" name="artikel">
                                     </div>
-
-                                    <input type="hidden" name="id">
-                                    <button type="submit" class="btn btn-primary mt-4">Simpan Perubahan</button>
+                                    <button type="submit" class="btn btn-primary mt-4">Tambah Perubahan</button>
                                 </form>
                                 
                             </div>

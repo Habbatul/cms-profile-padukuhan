@@ -19,9 +19,9 @@
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-100 md:text-2xl ">
                     Login Admin Padukuhan
                 </h1>
-                <?php if (isset($error)): ?>
+                <?php if (session()->getFlashdata('err') != ''): ?>
                     <div class="bg-red-500 text-white p-3 mb-4 rounded-md">
-                        <?php echo $error; ?>
+                        <?php echo session()->getFlashdata('err'); ?>
                     </div>
                 <?php endif; ?>
                 <?php echo form_open('/admin/login', 'class="space-y-4 md:space-y-6"'); ?>

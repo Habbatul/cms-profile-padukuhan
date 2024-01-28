@@ -87,4 +87,20 @@ class Admin extends BaseController
     {
         return view("/admin/tambah-pengumuman");
     }
+    
+    public function ubahPerangkat()
+    {
+        $id = $this->request->getGet('code');
+
+        // implementasi penggunaan file disini
+
+        $perangkatModel = new PerangkatModel();
+        $perangkatData = $perangkatModel->find($id);
+        return view("/admin/ubah-perangkat", ['perangkat' => $perangkatData]);
+    }
+
+    public function tambahPerangkat()
+    {
+        return view("/admin/tambah-perangkat");
+    }
 }

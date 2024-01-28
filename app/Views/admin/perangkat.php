@@ -92,8 +92,8 @@
                                             <td><?= $row['nama'] ?></td>                                         
                                             <td><?= $row['jabatan'] ?></td>
                                             <td class="text-center">
-                                                <a class="btn btn-primary btn-sm mt-2"><small>Ubah</small></a>
-                                                <a class="btn btn-danger btn-sm mt-2"><small>Hapus</small></a>
+                                                <a class="btn btn-primary btn-sm mt-2" href="form-ubah-perangkat?code=<?= $row['id'] ?>"><small>Ubah</small></a>
+                                                <a class="btn btn-danger btn-sm mt-2" href="hapusPerangkat?code=<?= $row['id']?>"><small>Hapus</small></a>
                                             </td>
                                         </tr>
                                         <?php endforeach; ?>
