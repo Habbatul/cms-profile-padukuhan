@@ -44,7 +44,8 @@
     <div class="text-3xl text-slate-700 text-center mb-7 md:mb-10 mt-8 font-bold font-Poppins mx-8"><span class="text-emerald-700">Perangkat</span> Padukuhan</div>
 
     <!-- nanti fetch disini -->
-    <div class="flex flex-wrap items-center justify-center mx-5 md:mx-16 mb-20">
+    <div class="flex items-center justify-center mx-5 md:mx-16 mb-20">
+    <div class="flex flex-wrap justify-center max-w-7xl">
         <!-- fetch disini -->
         <?php foreach ($perangkatData as $row) : ?>
         <div class="max-w-xs rounded-lg overflow-hidden shadow-[0_2px_10px_1px_rgba(0,0,0,0.2)] m-5  bg-white">
@@ -66,7 +67,7 @@
             </div>
         </div>
         <?php endforeach; ?>
-
+    </div>
         <!-- end fecth -->
     </div>
 

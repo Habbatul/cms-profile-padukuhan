@@ -67,4 +67,19 @@ class Auth extends BaseController
 
         return JWT::encode($payload, $key, 'HS256');
     }
+
+    public function logout(){
+        $this->response->setCookie(
+            'jwt_token',
+            'logout user',
+            time() + 3600,
+            '',//base_url()
+            '/',
+            '',
+            false,
+            true,
+            null
+        );
+        return redirect()->to(base_url('admin/login'))->withCookies();
+    }
 }

@@ -32,22 +32,24 @@ $routes->group('admin', ['filter' => 'jwt'], function($routes){
     
     $routes->post('ubahJenisKelamin', 'FromHandler::ubahJenisKelamin');
     
-    $routes->get('form-ubah-pengumuman', 'admin::ubahPengumuman');
+    $routes->get('form-ubah-pengumuman', 'Admin::ubahPengumuman');
     $routes->post('ubahArtikel', 'FromHandler::ubahPengumuman');
     
-    $routes->get('form-tambah-pengumuman', 'admin::tambahPengumuman');
+    $routes->get('form-tambah-pengumuman', 'Admin::tambahPengumuman');
     $routes->post('tambahArtikel', 'FromHandler::tambahPengumuman');
 
     $routes->get('hapusArtikel', 'FromHandler::hapusPengumuman');
 
 
-    $routes->get('form-ubah-perangkat', 'admin::ubahPerangkat');
+    $routes->get('form-ubah-perangkat', 'Admin::ubahPerangkat');
     $routes->post('ubahPerangkat', 'FromHandler::ubahPerangkat');
     
-    $routes->get('form-tambah-perangkat', 'admin::tambahPerangkat');
+    $routes->get('form-tambah-perangkat', 'Admin::tambahPerangkat');
     $routes->post('tambahPerangkat', 'FromHandler::tambahPerangkat');
 
     $routes->get('hapusPerangkat', 'FromHandler::hapusPerangkat');
+
+    $routes->get('logout', 'Auth::logout');
 });
 
 $routes->group('admin', ['namespace' => 'App\Controllers'], function ($routes) {

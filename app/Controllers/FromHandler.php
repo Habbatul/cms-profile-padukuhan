@@ -288,6 +288,102 @@ class FromHandler extends BaseController
         return redirect()->to('/admin/pengumuman');
     } 
           
-     
+       // CRUD Jenis ubahPerangkat
+    public function ubahPerangkat()
+    {
+        $perangkatModel = new PerangkatModel();
+        
+        $id = $this->request->getPost('id');
+        $nama = $this->request->getPost('nama');
+        $jabatan   = $this->request->getPost('jabatan');
+
+        //pemrosesan file
+        $namaGambar = $perangkatModel->getFotoById($id);
+
+        //ambil request foto
+        $foto = $this->request->getFile('url-photo');
+
+        //Array untuk data ke db
+        $data = [
+            'nama' => $nama,
+            'jabatan' => $jabatan,
+        ];
+
+        // Menyimpan gambar di server dengan nama unik (bila foto ada, tidak wajib)
+        if ($foto->isValid() && !$foto->hasMoved()) {
+            $newName = $foto->getRandomName();
+            $foto->move(ROOTPATH . 'public/uploads', $newName);
+            // Kompresi gambar menggunakan library Image
+            \Config\Services::image()
+            ->withFile(ROOTPATH . 'public/uploads/' . $newName)
+            ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
+
+            //ekstraksi base_url pada $namaGambar
+            $namaGambar = str_replace(base_url(), '', $namaGambar);
+            // Hapus file lama jika ada
+            if ($namaGambar && file_exists(ROOTPATH . 'public/' . $namaGambar)) {
+                unlink(ROOTPATH . 'public/' . $namaGambar);
+            }
+
+            //tambahkan key 'foto' untuk mengubah imahge
+            $data['url-photo'] = base_url("uploads/".$newName);
+        }
+
+        //gunakan query builder
+        $perangkatModel->where('id', $id)->set($data)->update();;
+
+        return redirect()->to(base_url('/admin/form-ubah-perangkat?code=').$id);
+    }   
+
+    public function tambahPerangkat()
+    {
+        $perangkatModel = new PerangkatModel();
+
+        $nama = $this->request->getPost('nama');
+        $jabatan   = $this->request->getPost('jabatan');
+
+        //ambil request foto
+        $foto = $this->request->getFile('url-photo');
+
+        //Array untuk data ke db
+        $data = [
+            'jabatan' => $jabatan,
+            'nama' => $nama,
+        ];
+
+        // Menyimpan gambar di server dengan nama unik (bila foto ada, tidak wajib)
+        if ($foto->isValid() && !$foto->hasMoved()) {
+            $newName = $foto->getRandomName();
+            $foto->move(ROOTPATH . 'public/uploads', $newName);
+            // Kompresi gambar menggunakan library Image
+            \Config\Services::image()
+            ->withFile(ROOTPATH . 'public/uploads/' . $newName)
+            ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
+
+            $data['url-photo'] = base_url("uploads/".$newName);
+        }
+
+
+        // if(empty($id) || empty($judul) || empty($tanggal) || empty($artikel )){
+        //     throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound();
+        // }
+
+        //gunakan query builder
+        $perangkatModel->insert($data);
+        
+
+        return redirect()->to(base_url('/admin/perangkat'));
+    }   
+
+    public function hapusPerangkat()
+    {
+        $perangkatModel = new PerangkatModel();
+
+        $id = $this->request->getGet('code');
+
+        $perangkatModel->where('id', $id)->delete();
+
+        return redirect()->to('/admin/perangkat');
+    } 
 
 }

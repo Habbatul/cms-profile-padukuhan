@@ -28,7 +28,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Ubah Akun</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('admin/logout'); ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -97,7 +97,7 @@
                                     <div class="form-group mt-2">
                                         <label for="foto">Foto</label>
                                         <div class="input-group">
-                                            <input type="file" class="form-control" id="foto" name="foto" style="display: none;" onchange="updateFileName()">
+                                            <input type="file" class="form-control" id="foto" name="url-photo" style="display: none;" onchange="updateFileName()">
                                             <input type="text" class="form-control" id="file-name" readonly placeholder="Pilih file..." aria-describedby="inputGroupFileAddon">
                                             <div class="input-group-append">
                                                 <label class="btn btn-primary" for="foto" style="cursor: pointer;">Browse</label>

@@ -26,7 +26,7 @@
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#!">Ubah Akun</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?= base_url('admin/logout'); ?>">Logout</a></li>
                     </ul>
                 </li>
             </ul>
@@ -65,7 +65,7 @@
                         <h1 class="mt-4">Perangkat</h1>
 
                         <!-- card atas -->
-                        <div> <a class="btn btn-success w-auto mt-2 mb-2">Tambah Perangkat</a></div>
+                        <div> <a href="<?= base_url('admin/form-tambah-perangkat') ?>" class="btn btn-success w-auto mt-2 mb-2">Tambah Perangkat</a></div>
 
                         <!-- Tabel Pertama -->
                         <div id="UmurPenduduk" class="card mb-4">
