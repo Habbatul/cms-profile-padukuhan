@@ -50,6 +50,10 @@ $routes->group('admin', ['filter' => 'jwt'], function($routes){
     $routes->get('hapusPerangkat', 'FromHandler::hapusPerangkat');
 
     $routes->get('logout', 'Auth::logout');
+
+    $routes->post('ubahAkun', 'FromHandler::ubahAkun');
+    $routes->get('form-ubah-akun', 'Admin::ubahUser');
+    
 });
 
 $routes->group('admin', ['namespace' => 'App\Controllers'], function ($routes) {

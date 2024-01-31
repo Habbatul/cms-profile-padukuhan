@@ -8,6 +8,7 @@ use App\Models\PendidikanModel;
 use App\Models\UmurModel;
 use App\Models\PerangkatModel;
 use App\Models\PengumumanModel;
+use App\Models\UserModel;
 
 class Admin extends BaseController
 {
@@ -102,5 +103,16 @@ class Admin extends BaseController
     public function tambahPerangkat()
     {
         return view("/admin/tambah-perangkat");
+    }
+
+    //CRUD user
+
+    public function ubahUser()
+    {
+        $userModel = new UserModel();
+
+        $id = 1;
+        $data = $userModel->find($id);
+        return view("/admin/ubah-user", ['user' => $data]);
     }
 }

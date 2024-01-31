@@ -8,6 +8,7 @@ use App\Models\PendidikanModel;
 use App\Models\UmurModel;
 use App\Models\PerangkatModel;
 use App\Models\PengumumanModel;
+use App\Models\UserModel;
 
 class FromHandler extends BaseController
 {
@@ -288,7 +289,7 @@ class FromHandler extends BaseController
         return redirect()->to('/admin/pengumuman');
     } 
           
-       // CRUD Jenis ubahPerangkat
+       // CRUD Perangkat
     public function ubahPerangkat()
     {
         $perangkatModel = new PerangkatModel();
@@ -385,5 +386,21 @@ class FromHandler extends BaseController
 
         return redirect()->to('/admin/perangkat');
     } 
+
+    //CRUD akun
+    public function ubahAkun(){
+        $userModel = new UserModel();
+
+        $id = $this->request->getPost('code');
+        $username = $this->request->getPost('username');
+        $password   = $this->request->getPost('password');
+
+        $data = [
+            'username' => $username,
+            'password' => $password,
+        ];
+
+        $userModel->where('id', $id)->set($data)->update();
+    }
 
 }
