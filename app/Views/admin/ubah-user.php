@@ -80,7 +80,7 @@
                             </div>
                             <div class="card-body">
 
-                                <form action="/admin/ubahPerangkat" method="post" enctype="multipart/form-data"  onsubmit="updateQuillContent()">
+                                <form action="/admin/ubahAkun" method="post" enctype="multipart/form-data"  onsubmit="updateQuillContent()">
 
                                     <!-- Judul -->
                                     <div class="form-group">
@@ -91,7 +91,7 @@
                                     <!-- Judul -->
                                     <div class="form-group mt-2">
                                         <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" name="password" required>
+                                        <input type="password" class="form-control" id="password" name="password">
                                     </div>
                                     <input type="hidden" name="id" value="<?= $user['id']?>">
                                     <button type="submit" class="btn btn-primary mt-4">Simpan Perubahan</button>

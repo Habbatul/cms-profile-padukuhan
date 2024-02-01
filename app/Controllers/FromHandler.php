@@ -391,16 +391,25 @@ class FromHandler extends BaseController
     public function ubahAkun(){
         $userModel = new UserModel();
 
-        $id = $this->request->getPost('code');
+        $id = 1;
         $username = $this->request->getPost('username');
-        $password   = $this->request->getPost('password');
-
+        $password = (string) $this->request->getPost('password');
+        
         $data = [
             'username' => $username,
-            'password' => $password,
         ];
-
+        
+        if ($password !== null && $password !== '') {
+        
+            $options = [
+                'cost' => 11
+            ];
+        
+            $data['password'] = password_hash($password, PASSWORD_BCRYPT, $options);
+        }
+        
         $userModel->where('id', $id)->set($data)->update();
+        return redirect()->to('/admin/form-ubah-akun');
     }
 
 }
