@@ -49,7 +49,7 @@
         <div class="max-w-full p-6 flex justify-center items-center">
             <section class="mb-4 mt-4">
                 <h2 class="md:text-3xl text-2xl font-bold mb-4 text-center font-Poppins"><span class="text-emerald-700">Potensi</span> Padukuhan</h2>
-                <p class="text-justify lg:mx-60 md:mx-8 mx-5">Padukuhan Klangon memiliki berbagai potensi yang dapat dijelajahi. Berikut adalah beberapa objek wisata dan produk unggulan yang dapat ditemui di Padukuhan Klangon:</p>
+                <p class="text-justify lg:mx-60 md:mx-8 mx-5">Padukuhan Klangon memiliki berbagai potensi yang dapat dijelajahi. Berikut adalah objek wisata dan produk unggulan yang dapat ditemui di Padukuhan Klangon:</p>
             </section>
         </div>
         <section class="mb-28 mx-4">
@@ -57,17 +57,17 @@
 
                 <div class="flex flex-wrap mt-4">
                     <div class="my-auto mx-auto">
-                        <p class="font-bold text-xl mb-2 font-Poppins"><span class="text-emerald-700">Jembatan</span> Klangon</p>
-                        <p class="text-justify max-w-xl lg:max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut est accumsan tellus facilisis consequat sit amet sed orci. Maecenas sed quam tortor. Aenean rutrum turpis a mauris ultrices ornare. Ut justo libero, maximus in eros non, euismod consequat libero. Duis efficitur quam id dui eleifend eleifend. Nam in mi at massa posuere auctor facilisis sed dolor.</p>
+                        <p class="font-bold text-xl mb-2 font-Poppins"><span class="text-emerald-700">PDAM</span> Klangon</p>
+                        <p class="text-justify max-w-xl lg:max-w-lg">PDAM Klangon bukan hanya penyedia air utama, tetapi juga destinasi eksklusif dengan pemandangan luar biasa. Dari rooftop, warga dapat menikmati panorama gunung Merapi-Merbabu, sungai, dan kebun tebu yang hijau. Terdapat keindahan matahari terbit dan sungai Progo yang meliuk-liuk. Tempat ini juga sering dijadikan arena senam, menggabungkan keindahan alam dan kesehatan dalam satu tempat. Selamat datang di PDAM Klangon, di mana alam dan kesejahteraan bertemu.</p>
                     </div>
-                    <img src="https://via.placeholder.com/600x400.png?text=Gallery+2" alt="Gallery 2" class="md:rounded-lg shadow-md mx-auto mt-5">
+                    <img src="<?= base_url('galeri-klangon/pdam2.jpg'); ?>" alt="Gallery 2" class="object-cover object-center md:rounded-lg shadow-md mx-auto mt-5 md:w-[600px] md:h-[400px]">
                 </div>
 
                 <div class="flex flex-wrap-reverse mt-16">
-                    <img src="https://via.placeholder.com/600x400.png?text=Gallery+2" alt="Gallery 2" class="md:rounded-lg shadow-md mx-auto mt-5">
+                <img src="<?= base_url('galeri-klangon/olahan-durian.jpg'); ?>" alt="Gallery 2" class="object-cover object-center md:rounded-lg shadow-md mx-auto mt-5 md:w-[600px] md:h-[400px]">
                     <div class="my-auto mx-auto">
                         <p class="font-bold text-xl mb-2 font-Poppins"><span class="text-emerald-700">Produk Olahan</span> Durian</p>
-                        <p class="text-justify max-w-xl lg:max-w-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut est accumsan tellus facilisis consequat sit amet sed orci. Maecenas sed quam tortor. Aenean rutrum turpis a mauris ultrices ornare. Ut justo libero, maximus in eros non, euismod consequat libero. Duis efficitur quam id dui eleifend eleifend. Nam in mi at massa posuere auctor facilisis sed dolor.</p>
+                        <p class="text-justify max-w-xl lg:max-w-lg">KWT Klangon Happy menjadi pusat kreativitas kuliner dengan fokus utama pada pengolahan produk olahan durian. Dengan dedikasi yang tinggi, mereka menghasilkan beragam produk mulai dari soto kembang durian yang lezat hingga keripik kulit durian yang renyah. Bakso pongge, keripik pongge, pancake durian, es krim durian, dan geblek kulit durian juga menjadi sajian istimewa yang tersedia. KWT Klangon Happy tidak hanya memanfaatkan daging buah durian, tetapi juga kulit durian, pongge, dan bunga buah durian untuk menciptakan variasi produk yang unik dan menarik. Produk tersebut dipasarkan di Toko PanganKu dan Pasar Tani.</p>
                     </div>
                 </div>
             </ul>
@@ -76,14 +76,14 @@
 
 
     <!-- footer -->
-    <footer class="bg-[#014135] text-white py-6 lg:pb-20 lg:pt-24 md:pb-20 md:pt-14 pb-20 pt-10 mt-auto">
+    <footer class="mt-auto bg-[#014135] text-white py-6 lg:pb-20 lg:pt-24 md:pb-20 md:pt-14 pb-20 pt-10">
         <div class="lg:flex justify-center mx-5 lg:ml-1 ml-16 md:ml-20">
 
 
             <div class="flex-wrap justify-center lg:mr-20 mb-7 lg:mb-1 md:mb-5 pb-2 ">
-                <h2 class="text-xl font-bold text-white mb-3">Habbatul Qolbi H</h2>
+                <h2 class="text-xl font-bold text-white mb-3">Padukuhan Klangon</h2>
                 <p class="text-base text-gray-400">&copy; 2023 Habbatul Qolbi H. All rights reserved.</p>
-                <p class="text-base text-gray-400">Kalinegoro, Mertoyudan, Magelang, Jawa Tengah, Indonesia.</p>
+                <p class="text-base text-gray-400">Klangon, Banjaroyo, Kalibawang, Kulon Progo, Yogyakarta.</p>
             </div>
 
             <!-- Kontak -->
@@ -114,8 +114,8 @@
             <div class="flex-wrap">
                 <h3 class="text-lg font-medium text-white">Sosial Media</h3>
                 <ul>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Instagram</a></li>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Facebook</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Instagram</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Facebook</a></li>
                 </ul>
             </div>
 

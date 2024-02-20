@@ -45,13 +45,13 @@
         <div class="relative overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
                 <div class="w-full flex-shrink-0">
-                    <img src="https://via.placeholder.com/800x400.png?text=1" alt="Slide 1" class="w-full">
+                    <img src="<?= base_url('galeri-klangon/pemandangan2-slider.jpg'); //800x400 ?>" alt="Slide 1" class="w-full">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="https://via.placeholder.com/800x400.png?text=2" alt="Slide 2" class="w-full">
+                    <img src="<?= base_url('galeri-klangon/penghargaan-slider.jpg'); ?>" alt="Slide 2" class="w-full">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="https://via.placeholder.com/800x400.png?text=3" alt="Slide 3" class="w-full">
+                    <img src="<?= base_url('galeri-klangon/pdam2-slider.jpg'); ?>" alt="Slide 3" class="w-full">
                 </div>
                 <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
             </div>
@@ -78,7 +78,7 @@
 
     <div class="shadow-[0_2px_10px_1px_rgba(0,0,0,0.2)] max-w-screen-lg lg:mx-auto md:mx-5 mx-3 my-14 mb-20 px-6 p-5 rounded-md bg-gray-100 outline-emerald-500 outline-2 outline">
         <h2 class="font-Poppins text-2xl font-bold text-center "> <span class="text-emerald-700">Geografis </span>Padukuhan</h2>
-        <p class="mt-4 text-justify">Padukuhan Klangon merupakan bagian dari Desa Argosari. Padukuhan Klangon merupakan pusat dari Desa Argosari dengan luas wilayah 79.60 ha. Secara administrasi wilayah Padukuhan Klangon terbagi menjadi 6 Rukun Tetangga/RT. Yaitu RT 007, 008, 009, 010, 011. 012. Di Padukuhan Klangon hampir 48.52 % atau 48.52 ha berupa area pertanian/sawah, dengan33.18 % atau 26.42 ha berupa permukiman. Hal ini menunjukan bahwa pertanian merupakan salah satu sumber pendapatan bagi penduduk Klangon. Aspek kependudukan yang beraneka ragam dengan berbagai macam latar pendidikan, pekerjaan dan usia yang berbeda-beda merupakan faktor yang sangat berperan dalam penyusunan tata ruang desa. berdasarkan dari hasil pemetaan swadaya tahun 2014 jumlah penduduk mencapai 973 jiwa dan 307 KK.</p>
+        <p class="mt-4 text-justify">Padukuhan Klangon merupakan bagian dari Desa Banjar. Padukuhan Klangon merupakan pusat dari Desa Argosari dengan luas wilayah 79.60 ha. Secara administrasi wilayah Padukuhan Klangon terbagi menjadi 6 Rukun Tetangga/RT. Yaitu RT 007, 008, 009, 010, 011. 012. Di Padukuhan Klangon hampir 48.52 % atau 48.52 ha berupa area pertanian/sawah, dengan33.18 % atau 26.42 ha berupa permukiman. Hal ini menunjukan bahwa pertanian merupakan salah satu sumber pendapatan bagi penduduk Klangon. Aspek kependudukan yang beraneka ragam dengan berbagai macam latar pendidikan, pekerjaan dan usia yang berbeda-beda merupakan faktor yang sangat berperan dalam penyusunan tata ruang desa. berdasarkan dari hasil pemetaan swadaya tahun 2014 jumlah penduduk mencapai 973 jiwa dan 307 KK.</p>
 
         <!-- Konten lainnya di sini -->
         <!-- Map -->

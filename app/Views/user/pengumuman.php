@@ -93,9 +93,9 @@
 
 
             <div class="flex-wrap justify-center lg:mr-20 mb-7 lg:mb-1 md:mb-5 pb-2 ">
-                <h2 class="text-xl font-bold text-white mb-3">Habbatul Qolbi H</h2>
+                <h2 class="text-xl font-bold text-white mb-3">Padukuhan Klangon</h2>
                 <p class="text-base text-gray-400">&copy; 2023 Habbatul Qolbi H. All rights reserved.</p>
-                <p class="text-base text-gray-400">Kalinegoro, Mertoyudan, Magelang, Jawa Tengah, Indonesia.</p>
+                <p class="text-base text-gray-400">Klangon, Banjaroyo, Kalibawang, Kulon Progo, Yogyakarta.</p>
             </div>
 
             <!-- Kontak -->
@@ -126,8 +126,8 @@
             <div class="flex-wrap">
                 <h3 class="text-lg font-medium text-white">Sosial Media</h3>
                 <ul>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Instagram</a></li>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Facebook</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Instagram</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Facebook</a></li>
                 </ul>
             </div>
 

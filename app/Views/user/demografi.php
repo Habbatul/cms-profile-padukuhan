@@ -47,7 +47,9 @@
 
     <!-- Isian disini -->
     <div class="md:text-3xl text-2xl text-slate-700 text-center mb-7 md:mb-10 mt-9 font-bold font-Poppins mx-8"><span class="text-emerald-700">Demografi Penduduk</span> Padukuhan</div>
-
+    <div class="max-w-screen-md mx-auto px-6 mb-6">
+        <p class="text-justify font-Inter">Selamat datang di halaman Demografis Padukuhan Klangon! Di sini, Anda dapat mengeksplorasi karakteristik penduduk kami melalui grafik interaktif. Data yang disajikan mencakup informasi tentang jenis kelamin, pekerjaan, pendidikan, dan distribusi usia.</p>
+    </div>
     <div class="bg-gray-100 lg:max-w-4xl md:max-w-xl max-w-80 md:mx-auto mx-10 p-6 rounded outline outline-2 outline-emerald-600 shadow-[0_2px_10px_1px_rgba(0,0,0,0.5)] mt-5 mb-20 ">
 
         <!-- Tambahkan tombol untuk filter -->
@@ -60,7 +62,7 @@
                 <option value="umur">Umur</option>
             </select>
         </div>
-        <!-- Tempatkan canvas untuk grafik di sini -->
+        <!-- graf padukuhan -->
         <div class="flex flex-wrap items-center justify-center mt-6">
             <div class="mx-4 w-full lg:w-auto">
                 <canvas id="myDoughnutChart" class="h-[300px] md:h-[400px] w-full lg:w-[400px]"></canvas>
@@ -73,7 +75,7 @@
 
     <script>
 
-        // random warna 
+        //ngerandom warna
         const generateRandomColor = () => {
             const letters = '0123456789ABCDEF';
             let color = '#';
@@ -91,7 +93,7 @@
             return colors;
         }; //
 
-        // data utama
+        //data utama
         const data = {
             jenis_kelamin: {
             labels: ['Laki-laki', 'Perempuan'],
@@ -119,7 +121,7 @@
         const initialData = getDataByFilter(initialFilter);
         const ctx = document.getElementById('myDoughnutChart').getContext('2d');
 
-        // Tambahkan opsi responsive dan maintainAspectRatio
+        //haruse udah responsive
         const myDoughnutChart = new Chart(ctx, {
             type: 'doughnut',
             data: {
@@ -151,7 +153,7 @@
             }
         });
 
-        // Inisialisasi label counts
+        //inisialisasi label counts
         updateLabelCounts(initialData.labels, initialData.values);
 
         function updateChart() {
@@ -162,7 +164,7 @@
             myDoughnutChart.data.datasets[0].data = newData.values;
             myDoughnutChart.update();
 
-            // Update jumlah tiap label
+            //update jumlah tiap label
             updateLabelCounts(newData.labels, newData.values);
         }
 
@@ -179,14 +181,14 @@
         }
     </script>
 
-    <footer class="mt-auto bg-[#014135] text-white py-6 lg:pb-20 lg:pt-24 md:pb-20 md:pt-14 pb-20 pt-10">
+<footer class="mt-auto bg-[#014135] text-white py-6 lg:pb-20 lg:pt-24 md:pb-20 md:pt-14 pb-20 pt-10">
         <div class="lg:flex justify-center mx-5 lg:ml-1 ml-16 md:ml-20">
 
 
             <div class="flex-wrap justify-center lg:mr-20 mb-7 lg:mb-1 md:mb-5 pb-2 ">
-                <h2 class="text-xl font-bold text-white mb-3">Habbatul Qolbi H</h2>
+                <h2 class="text-xl font-bold text-white mb-3">Padukuhan Klangon</h2>
                 <p class="text-base text-gray-400">&copy; 2023 Habbatul Qolbi H. All rights reserved.</p>
-                <p class="text-base text-gray-400">Kalinegoro, Mertoyudan, Magelang, Jawa Tengah, Indonesia.</p>
+                <p class="text-base text-gray-400">Klangon, Banjaroyo, Kalibawang, Kulon Progo, Yogyakarta.</p>
             </div>
 
             <!-- Kontak -->
@@ -217,8 +219,8 @@
             <div class="flex-wrap">
                 <h3 class="text-lg font-medium text-white">Sosial Media</h3>
                 <ul>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Instagram</a></li>
-                    <li><a href="https://instagram.com/hq.han?igshid=ZGUzMzM3NWJiOQ==" class="text-gray-300 hover:text-white">Facebook</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Instagram</a></li>
+                    <li><a href="#" class="text-gray-300 hover:text-white">Facebook</a></li>
                 </ul>
             </div>
 

@@ -90,7 +90,7 @@
                                             <th style="width:10rem;">Foto</th>
                                             <th >Tanggal</th>
                                             <th >Penulis</th>
-                                            <th style="width:20rem">Artikel (preview)</th>
+                                            <th>Artikel (preview)</th>
                                             <th >Pilihan</th>
                                         </tr>
                                     </thead>
@@ -102,8 +102,7 @@
                                             <td class="text-center"><img src="<?= $row['foto'] ?>" class="img-fluid rounded ratio ratio-1x1" style="width: 200px; height: 200px;"></td>
                                             <td><?= $row['tanggal'] ?></td>
                                             <td><?= $row['user'] ?></td>
-                                            <td>
-                                                <div style="width:16rem"></div>
+                                            <td style="max-width: 16rem;">
                                                 <p class="artikelContent">
                                                 <?= strip_tags($row['artikel']) ?>
                                                 </p>
@@ -151,7 +150,7 @@
 
                 artikelContents.forEach(function (artikelContent) {
                     var fullText = artikelContent.textContent;
-                    var maxChars = 200;
+                    var maxChars = 150;
 
                     if (fullText.length > maxChars) {
                         var truncatedText = fullText.substring(0, maxChars);
