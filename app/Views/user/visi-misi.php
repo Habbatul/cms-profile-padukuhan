@@ -57,14 +57,18 @@
         <section class="mb-24 xl:mb-36 mx-4">
             <div class="flex flex-wrap-reverse mb-4">
                 <div class="my-auto mx-auto px-4 mt-8">
-                    <p class="font-bold lg:text-2xl text-xl mb-2 font-Poppins"><span class="text-emerald-700">Misi</span> Padukuhan Klangon</p>
-                    <p class="text-justify max-w-xl lg:max-w-lg font-inter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut est accumsan tellus facilisis consequat sit amet sed orci. Maecenas sed quam tortor. Aenean rutrum turpis a mauris ultrices ornare. Ut justo libero, maximus in eros non, euismod consequat libero. Duis efficitur quam id dui eleifend eleifend. Nam in mi at massa posuere auctor facilisis sed dolor.</p>
+                    <p class="font-bold lg:text-2xl text-xl mb-2 font-Poppins"><span class="text-emerald-700">Visi</span> Padukuhan Klangon</p>
+                    <p class="text-justify max-w-xl lg:max-w-lg font-inter">Menjadi pusat pengembangan agrowisata durian yang unggul secara nasional, mengintegrasikan berbagai tempat dengan keindahan alam serta menyediakan pengalaman berharga bagi pengunjung dari Jogja menuju Borobudur.</p>
                 </div>
 
                 <div class="my-auto mx-auto px-4 mt-8">
 
-                    <p class="font-bold lg:text-2xl text-xl mb-2 font-Poppins"><span class="text-emerald-700">Visi</span> Padukuhan Klangon</p>
-                    <p class="text-justify max-w-xl lg:max-w-lg font-inter">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut est accumsan tellus facilisis consequat sit amet sed orci. Maecenas sed quam tortor. Aenean rutrum turpis a mauris ultrices ornare. Ut justo libero, maximus in eros non, euismod consequat libero. Duis efficitur quam id dui eleifend eleifend. Nam in mi at massa posuere auctor facilisis sed dolor.</p>
+                    <p class="font-bold lg:text-2xl text-xl mb-2 font-Poppins"><span class="text-emerald-700">Misi</span> Padukuhan Klangon</p>
+                        <ul class="text-justify max-w-xl lg:max-w-lg font-inter list-disc pl-5">
+                            <li>Mendukung pengembangan KWT dalam produksi olahan durian yang beragam.</li>
+                            <li>Menggalakkan kerjasama antara KWT dengan pihak terkait dalam pemasaran produk olahan durian secara lokal, nasional, maupun internasional.</li>
+                            <li>Mengidentifikasi dan mengembangkan potensi unik dari padukuhan, termasuk keindahan alam, warisan budaya, dan tradisi lokal, sebagai daya tarik utama bagi wisatawan.</li>
+                        </ul> 
                 </div>
 
             </div>

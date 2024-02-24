@@ -62,14 +62,14 @@
 
     <div class="max-w-screen-lg mx-auto mt-8 px-6">
         <h2 class="text-2xl font-bold text-center font-Poppins"> <span class="text-emerald-700">Gambaran </span>Padukuhan</h2>
-        <p class="mt-4 text-justify">Padukuhan Klangon merupakan bagian dari Desa Argosari. Padukuhan Klangon merupakan pusat dari Desa Argosari dengan luas wilayah 79.60 ha. Secara administrasi wilayah Padukuhan Klangon terbagi menjadi 6 Rukun Tetangga/RT. Yaitu RT 007, 008, 009, 010, 011. 012. Di Padukuhan Klangon hampir 48.52 % atau 48.52 ha berupa area pertanian/sawah, dengan33.18 % atau 26.42 ha berupa permukiman. Hal ini menunjukan bahwa pertanian merupakan salah satu sumber pendapatan bagi penduduk Klangon. Aspek kependudukan yang beraneka ragam dengan berbagai macam latar pendidikan, pekerjaan dan usia yang berbeda-beda merupakan faktor yang sangat berperan dalam penyusunan tata ruang desa. berdasarkan dari hasil pemetaan swadaya tahun 2014 jumlah penduduk mencapai 973 jiwa dan 307 KK.</p>
+        <p class="mt-4 text-justify">Padukuhan Klangon adalah sebuah padukuhan yang terletak di Desa Banjaroya, Kalibawang, Kulon Progo, Yogyakarta. Luas daerah padukuhan Klangon adalah sekitar 483000 m2 atau 48.3 Ha (± 1 Ha). Padukuhan ini terdiri dari 4 RT (yaitu RT 28, RT 29, RT 30 dan RT 31) dan 2 RW (yaitu RW 14 dan RW 15). Sebagian besar penduduk Padukuhan Klangon bermata pencaharian sebagai petani/pekebun dan buruh. Daerah ini dikenal sebagai agro durian, yang terkenal akan hasil produk makanan berbahan baku durian. Padukuhan Klangon memiliki komunitas KWT Klangon Happy, yang bergerak dalam kegiatan pengolahan dengan bahan dasar durian, mulai dari daging buah durian, kulit durian, pongge serta bunga buah durian menjadi produk olahan makanan yang telah dipasarkan di beberapa outlet UMKM di Kabupaten Kulon Progo.</p>
     </div>
 
 
     <div class="max-w-screen-lg mx-auto mt-8 flex flex-wrap justify-center">
-        <img src="https://via.placeholder.com/400x200.png?text=Gallery+1" alt="Gallery 1" class="m-4 md:rounded-lg shadow-md">
-        <img src="https://via.placeholder.com/400x200.png?text=Gallery+2" alt="Gallery 2" class="m-4 md:rounded-lg shadow-md">
-        <img src="https://via.placeholder.com/400x200.png?text=Gallery+3" alt="Gallery 3" class="m-4 md:rounded-lg shadow-md">
+        <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 1" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
+        <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 2" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
+        <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 3" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
         <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
     </div>
 
@@ -78,7 +78,7 @@
 
     <div class="shadow-[0_2px_10px_1px_rgba(0,0,0,0.2)] max-w-screen-lg lg:mx-auto md:mx-5 mx-3 my-14 mb-20 px-6 p-5 rounded-md bg-gray-100 outline-emerald-500 outline-2 outline">
         <h2 class="font-Poppins text-2xl font-bold text-center "> <span class="text-emerald-700">Geografis </span>Padukuhan</h2>
-        <p class="mt-4 text-justify">Padukuhan Klangon merupakan bagian dari Desa Banjar. Padukuhan Klangon merupakan pusat dari Desa Argosari dengan luas wilayah 79.60 ha. Secara administrasi wilayah Padukuhan Klangon terbagi menjadi 6 Rukun Tetangga/RT. Yaitu RT 007, 008, 009, 010, 011. 012. Di Padukuhan Klangon hampir 48.52 % atau 48.52 ha berupa area pertanian/sawah, dengan33.18 % atau 26.42 ha berupa permukiman. Hal ini menunjukan bahwa pertanian merupakan salah satu sumber pendapatan bagi penduduk Klangon. Aspek kependudukan yang beraneka ragam dengan berbagai macam latar pendidikan, pekerjaan dan usia yang berbeda-beda merupakan faktor yang sangat berperan dalam penyusunan tata ruang desa. berdasarkan dari hasil pemetaan swadaya tahun 2014 jumlah penduduk mencapai 973 jiwa dan 307 KK.</p>
+        <p class="mt-4 text-justify">Luas daerah padukuhan Klangon adalah sekitar 483000 m2 atau 48.3 Ha (± 1 Ha). Padukuhan Klangon terletak di bagian utara Kabupaten Kulon Progo, Jawa Tengah. Secara geografis, padukuhan ini berbatasan dengan Kabupaten Magelang di sebelah utara. Di sebelah timur, Klangon berbatasan dengan Padukuhan Pranan di Kecamatan Kalibawang, Kulon Progo. Sedangkan di sebelah selatan, batas wilayahnya adalah dengan Padukuhan Patronalan dan Pranan, juga di Kecamatan Kalibawang. Di sisi barat, Padukuhan Klangon berbatasan dengan Padukuhan Beji, yang juga terletak di Kecamatan Kalibawang, Kulon Progo. Dengan posisinya yang strategis, Klangon menjadi salah satu titik penting dalam peta geografis Kabupaten Kulon Progo.</p>
 
         <!-- Konten lainnya di sini -->
         <!-- Map -->
