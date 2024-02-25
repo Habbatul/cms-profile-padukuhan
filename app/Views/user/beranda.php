@@ -45,13 +45,13 @@
         <div class="relative overflow-hidden">
             <div class="flex transition-transform duration-500 ease-in-out" id="carousel">
                 <div class="w-full flex-shrink-0">
-                    <img src="<?= base_url('galeri-klangon/pemandangan2-slider.jpg'); //800x400 ?>" alt="Slide 1" class="w-full">
+                    <img src="<?= base_url('galeri-klangon/jembatan-klangon-slider.png'); //800x400 ?>" alt="Slide 1" class="w-full">
                 </div>
                 <div class="w-full flex-shrink-0">
                     <img src="<?= base_url('galeri-klangon/penghargaan-slider.jpg'); ?>" alt="Slide 2" class="w-full">
                 </div>
                 <div class="w-full flex-shrink-0">
-                    <img src="<?= base_url('galeri-klangon/pdam2-slider.jpg'); ?>" alt="Slide 3" class="w-full">
+                    <img src="<?= base_url('galeri-klangon/pemandangan2-slider.jpg'); ?>" alt="Slide 3" class="w-full">
                 </div>
                 <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
             </div>
@@ -68,8 +68,8 @@
 
     <div class="max-w-screen-lg mx-auto mt-8 flex flex-wrap justify-center">
         <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 1" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
-        <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 2" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
-        <img src="<?= base_url('galeri-klangon/makanan-durian.png'); ?>" alt="Gallery 3" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
+        <img src="<?= base_url('galeri-klangon/jembatan-klangon1.png'); ?>" alt="Gallery 2" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
+        <img src="<?= base_url('galeri-klangon/jembatan-klangon2.png'); ?>" alt="Gallery 3" class="m-4 md:rounded-lg shadow-md md:w-[25rem]">
         <!-- Tambahkan lebih banyak gambar sesuai kebutuhan -->
     </div>
 
