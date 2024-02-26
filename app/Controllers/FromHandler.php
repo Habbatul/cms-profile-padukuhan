@@ -207,6 +207,7 @@ class FromHandler extends BaseController
             $foto->move(ROOTPATH . 'public/uploads', $newName);
             // Kompresi gambar menggunakan library Image
             \Config\Services::image()
+            ->reorient() //perbaikan any mobile phone orientation issues
             ->withFile(ROOTPATH . 'public/uploads/' . $newName)
             ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
 
@@ -260,6 +261,7 @@ class FromHandler extends BaseController
             $foto->move(ROOTPATH . 'public/uploads', $newName);
             // Kompresi gambar menggunakan library Image
             \Config\Services::image()
+            ->reorient() //perbaikan any mobile phone orientation issues
             ->withFile(ROOTPATH . 'public/uploads/' . $newName)
             ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
 
@@ -316,6 +318,7 @@ class FromHandler extends BaseController
             $foto->move(ROOTPATH . 'public/uploads', $newName);
             // Kompresi gambar menggunakan library Image
             \Config\Services::image()
+            ->reorient() //perbaikan any mobile phone orientation issues
             ->withFile(ROOTPATH . 'public/uploads/' . $newName)
             ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
 
@@ -358,6 +361,7 @@ class FromHandler extends BaseController
             $foto->move(ROOTPATH . 'public/uploads', $newName);
             // Kompresi gambar menggunakan library Image
             \Config\Services::image()
+            ->reorient() //perbaikan any mobile phone orientation issues
             ->withFile(ROOTPATH . 'public/uploads/' . $newName)
             ->save(ROOTPATH . 'public/uploads/' . $newName, 30);
 
